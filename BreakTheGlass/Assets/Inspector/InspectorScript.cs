@@ -11,6 +11,7 @@ public class InspectorScript : MonoBehaviour
     [Range(1, 10)]
     public float scrollSpeed;
 
+    public Vector2 MinMaxScroll;
 
 
     public void changeObject()
@@ -40,13 +41,13 @@ public class InspectorScript : MonoBehaviour
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
         {
-            Zpos -= scrollSpeed * 100 * Time.deltaTime;
+            Zpos -= scrollSpeed * 10 * Time.deltaTime;
         }
         if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
         {
-            Zpos += scrollSpeed * 100 * Time.deltaTime;
+            Zpos += scrollSpeed * 10 * Time.deltaTime;
         }
-        Zpos = Mathf.Clamp(Zpos, -3, 3f);
+        Zpos = Mathf.Clamp(Zpos, MinMaxScroll.x, MinMaxScroll.y);
       
         camPos.localPosition = new Vector3(camPos.localPosition.x, camPos.localPosition.y, Zpos);
 

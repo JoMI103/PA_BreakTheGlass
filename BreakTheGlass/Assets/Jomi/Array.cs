@@ -7,22 +7,28 @@ public class Array : MonoBehaviour
 {
     public GameObject Object;
     public int numb;
-    public Vector3 offSet ,of;
+    public Vector3 offSet;
+    public bool destroyArray;
 
     public void CreateArray()
     {
-        for(int i = 0; i < numb; i++)
+        Debug.Log(transform.childCount);
+
+        List<GameObject> delete = new List<GameObject>();
+
+        if (destroyArray)
         {
-            
-            GameObject instiatedObject = Instantiate(Object, this.transform);
-            Debug.Log(offSet);
-            Debug.Log(instiatedObject.GetComponent<MeshFilter>().sharedMesh.bounds.extents);
-            Debug.Log(instiatedObject.transform.localScale + "\n\n");
-            instiatedObject.transform.localPosition = Vector3.zero + Vector3.Scale(offSet,Vector3.Scale(instiatedObject.GetComponent<MeshFilter>().mesh.bounds.extents,instiatedObject.transform.localScale)) * i;
+            foreach (Transform child in transform)
+            delete.Add(child.gameObject);
+        
+            foreach(GameObject g in delete)
+            if (Application.isEditor) DestroyImmediate(g.gameObject);
+            else Destroy(g.gameObject);
         }
-        
-
-        
-
+        for (int i = 0; i < numb; i++)
+        {
+            GameObject instiatedObject = Instantiate(Object, this.transform);
+            instiatedObject.transform.localPosition = Vector3.zero + Vector3.Scale(offSet,Vector3.Scale(instiatedObject.GetComponent<MeshFilter>().sharedMesh.bounds.extents,instiatedObject.transform.localScale)) * 2 * i;
+        }
     }
 }

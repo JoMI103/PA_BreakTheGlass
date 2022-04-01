@@ -6,30 +6,32 @@ public class OpenShelf : MonoBehaviour
 {
 
     [SerializeField] private CheckTrigger trigger;
-    private Animator Animation;
+    private Animator _an;
     private bool shelfisclosed = true;
 
 
     private void Start()
     {
-        Animation = GetComponent<Animator>();
+        _an = GetComponent<Animator>();
         
     }
 
     private void Update()
     {
+        if (!(_an.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !_an.IsInTransition(0))) return;
+
         if (trigger.colliding)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (shelfisclosed)
                 {
-                    Animation.Play("OpenShelf");
+                    _an.Play("OpenShelf");
                     shelfisclosed = false;
                 }
                 else
                 {
-                    Animation.Play("CloseShelf");
+                    _an.Play("CloseShelf");
                     shelfisclosed = true;
                 }               
             }

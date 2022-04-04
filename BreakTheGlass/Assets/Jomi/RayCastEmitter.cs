@@ -21,7 +21,7 @@ public class RayCastEmitter : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 2f, layerMask))
         {
             
-            hit.transform.gameObject.GetComponent<>
+//            hit.transform.gameObject.GetComponent<>
             
         }
         else

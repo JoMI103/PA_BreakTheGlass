@@ -8,10 +8,11 @@ public class OpenShelf : MonoBehaviour
     [SerializeField] private CheckTrigger trigger;
     private Animator _an;
     private bool shelfisclosed = true;
-
+    private RayCastReceiver receiver;
 
     private void Start()
     {
+        receiver = GetComponent<RayCastReceiver>();
         _an = GetComponent<Animator>();
         
     }
@@ -22,8 +23,10 @@ public class OpenShelf : MonoBehaviour
 
         if (trigger.colliding)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyUp(KeyCode.E) && receiver.ct)
             {
+                receiver.casted();
+
                 if (shelfisclosed)
                 {
                     _an.Play("OpenShelf");

@@ -1,15 +1,18 @@
+using System.Collections.Generic;
 using UnityEngine;
+
 
 public class RayCastReceiver : MonoBehaviour
 {
-    
-    void Start()
+    public bool ct;
+
+    public void casted()
     {
-        
+        ct = false;
     }
 
-    void Update()
+    public void cast()
     {
-        
+        ct = true;
     }
 }

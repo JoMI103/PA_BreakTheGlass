@@ -15,20 +15,26 @@ public class RayCastEmitter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        RaycastHit hit;
-        // Does the ray intersect any objects excluding the player layer
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 2f, layerMask))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            
-//            hit.transform.gameObject.GetComponent<>
-            
-        }
-        else
-        {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 2, Color.white);
-            Debug.Log("Did not Hit");
-        }
+            RaycastHit hit;
+            // Does the ray intersect any objects excluding the player layer
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 3f, layerMask))
+            {
+                RayCastReceiver rayC;
+                rayC = hit.transform.gameObject.GetComponent<RayCastReceiver>();
 
+                if(rayC != null)
+                {
+                    rayC.cast();
+                }
+
+            }
+            else
+            {
+                
+                Debug.Log("Did not Hit");
+            }
+        }
     }
 }

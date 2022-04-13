@@ -5,10 +5,11 @@ using UnityEngine;
 public class OpenShelf : MonoBehaviour
 {
 
-    [SerializeField] private CheckTrigger trigger;
+
     private Animator _an;
     private bool shelfisclosed = true;
     private RayCastReceiver receiver;
+    [SerializeField] private string anName;
 
     private void Start()
     {
@@ -21,24 +22,21 @@ public class OpenShelf : MonoBehaviour
     {
         if (!(_an.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !_an.IsInTransition(0))) return;
 
-        if (trigger.colliding)
-        {
             if (Input.GetKeyUp(KeyCode.E) && receiver.ct)
             {
                 receiver.casted();
 
                 if (shelfisclosed)
                 {
-                    _an.Play("OpenShelf");
+                    _an.Play("Open"+ anName);
                     shelfisclosed = false;
                 }
                 else
                 {
-                    _an.Play("CloseShelf");
+                    _an.Play("Close" + anName);
                     shelfisclosed = true;
                 }               
             }
-        }
     }
 
 }

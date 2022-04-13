@@ -30,7 +30,6 @@ Transform:
   m_Children:
   - {fileID: 206010072619777728}
   - {fileID: 3195096741529571638}
-  - {fileID: 204053741449254109}
   - {fileID: 3195096741317012203}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -164,7 +163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aad9253de24cb494ebc8cef06f4e9356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 204053741449254108}
+  trigger: {fileID: 0}
+  anName: Shelf
 --- !u!64 &203137365584654231
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -273,64 +273,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &204053741449254098
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 204053741449254109}
-  - component: {fileID: 204053741449254111}
-  - component: {fileID: 204053741449254108}
-  m_Layer: 0
-  m_Name: ShelfTrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &204053741449254109
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204053741449254098}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0656424, y: 0.24485636, z: 0.633}
-  m_LocalScale: {x: 0.6126356, y: 0.34876212, z: 0.6902002}
-  m_Children: []
-  m_Father: {fileID: 199502572636486182}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &204053741449254111
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204053741449254098}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.64, y: 1, z: 0.76}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &204053741449254108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204053741449254098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59d6d05be7896433f98c17f994f22d9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colliding: 0
 --- !u!1 &3195096740237756692
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,7 +389,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aad9253de24cb494ebc8cef06f4e9356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 204053741449254108}
+  trigger: {fileID: 0}
+  anName: Shelf
 --- !u!64 &3195096740237756689
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -504,7 +447,7 @@ Transform:
   m_Children:
   - {fileID: 3195096740237756691}
   m_Father: {fileID: 199502572636486182}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3195096741529571639
 GameObject:

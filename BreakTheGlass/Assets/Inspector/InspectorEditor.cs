@@ -13,7 +13,7 @@ public class InspectorEditor : Editor
 
         if (GUILayout.Button("Test"))
         {
-            myScript.changeObject();
+           // myScript.changeObject();
         }
     }
 }

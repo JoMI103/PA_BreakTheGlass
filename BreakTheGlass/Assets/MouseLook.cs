@@ -19,7 +19,7 @@ public class MouseLook : MonoBehaviour
     {
         if (EventSystem.current.IsPointerOverGameObject()) {  return; }
      
-        Cursor.lockState = CursorLockMode.Locked;
+       
 
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Rust Key
   IdPuzzle: 2
-  prefab: {fileID: 100008, guid: bd09b17863ebbf74c82083bf72572ff1, type: 3}
+  prefab: {fileID: 374289202576707483, guid: 78df1db2fbc8ec64f949fac0c05bf693, type: 3}
   image: {fileID: 21300000, guid: 31aef3f703838f346bbee161bff6a9bb, type: 3}

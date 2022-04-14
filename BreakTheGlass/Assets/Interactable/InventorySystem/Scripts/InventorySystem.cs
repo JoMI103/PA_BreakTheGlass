@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class InventorySystem : MonoBehaviour
 {
+    public static bool InventoryIsOpen;
+
     public InventorySlot[] slots;
     public GameObject inventoryUI;
-
+    public void Start()
+    {
+        InventoryIsOpen = false;
+    }
 
     private void Update()
     {
@@ -19,6 +24,7 @@ public class InventorySystem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
+            InventoryIsOpen = !InventoryIsOpen;
             inventoryUI.SetActive(!inventoryUI.activeSelf);
             Cursor.lockState = CursorLockMode.None;
         }

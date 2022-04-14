@@ -15,6 +15,8 @@ public class RayCastEmitter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (InspectorScript.inspecting) return;
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             RaycastHit hit;

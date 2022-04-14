@@ -5,6 +5,7 @@ using UnityEngine;
 public class RayCastReceiver : MonoBehaviour
 {
     public bool ct;
+    public GameObject player;
 
     public void casted()
     {

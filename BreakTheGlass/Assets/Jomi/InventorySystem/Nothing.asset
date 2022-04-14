@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 418f9dc35ed4db648a731e5be5b8e229, type: 3}
-  m_Name: Rust Key
+  m_Name: Nothing
   m_EditorClassIdentifier: 
-  name: Rust Key
-  IdPuzzle: 2
-  prefab: {fileID: 374289202576707483, guid: 78df1db2fbc8ec64f949fac0c05bf693, type: 3}
-  image: {fileID: 21300000, guid: 31aef3f703838f346bbee161bff6a9bb, type: 3}
+  name: Nothing
+  IdPuzzle: 0
+  prefab: {fileID: 0}
+  image: {fileID: 21300000, guid: 2c79dfa0937642b4e93bc9598032b400, type: 3}

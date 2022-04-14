@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class InspectorScript : MonoBehaviour
 {
-    public GameObject InspectorObject;
+    public static bool inspecting;
+    
+
     private GameObject instiatedObject;
     private Vector3 objectSize;
     private const float maxSize = 0.5f;
@@ -12,12 +14,12 @@ public class InspectorScript : MonoBehaviour
     public float scrollSpeed;
 
     public Vector2 MinMaxScroll;
+    public cameraManager cm;
 
-
-    public void changeObject()
+    public void InspectObject(GameObject objectInsp)
     {
-        if (InspectorObject == null) return; if (instiatedObject != null)  Destroy(instiatedObject);
-        instiatedObject = Instantiate(InspectorObject,this.transform);
+        if (objectInsp == null) return; if (instiatedObject != null)  Destroy(instiatedObject);
+        instiatedObject = Instantiate(objectInsp, this.transform);
         
         instiatedObject.transform.localPosition = Vector3.zero;
 
@@ -37,6 +39,14 @@ public class InspectorScript : MonoBehaviour
 
     private void Update()
     {
+        if (!inspecting) return;
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            inspecting = false;
+            cm.changeCamera(0);
+        }
+
         if (instiatedObject == null) return;
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward

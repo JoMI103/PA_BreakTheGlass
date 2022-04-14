@@ -1,18 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public cameraManager cm;
+    public InspectorScript _IP;
+    public Item slotItem;
+
+    public Image img;
+
+    public void updateButton()
     {
-        
+        img.sprite = slotItem.image;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void InspectItem()
     {
-        
+        if(slotItem.prefab != null)
+        {
+            InspectorScript.inspecting = true;
+            cm.changeCamera(1);
+            _IP.InspectObject(slotItem.prefab);
+        }
     }
+
+
 }

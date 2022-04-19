@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33031458729735104}
   - component: {fileID: 23706833696114552}
   - component: {fileID: 9029965170841136732}
+  - component: {fileID: 4594063424310446577}
   m_Layer: 0
   m_Name: door_01
   m_TagString: Untagged
@@ -95,6 +96,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9000003, y: 2, z: 0.11999901}
   m_Center: {x: -0.44999912, y: 0.99999994, z: -0.019999776}
+--- !u!114 &4594063424310446577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242382745476934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9bd3e8ad649f4044a87f06d1b3c509b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ct: 0
+  player: {fileID: 0}
 --- !u!1 &1702915204394996
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,6 +124,7 @@ GameObject:
   - component: {fileID: 7100717737746077824}
   - component: {fileID: 2911181094431143172}
   - component: {fileID: 6160034645691764750}
+  - component: {fileID: 6905146189152248203}
   m_Layer: 0
   m_Name: Wall_door_01_cast
   m_TagString: Untagged
@@ -229,6 +245,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frontTrigger: {fileID: 5917851089272998981}
   backTrigger: {fileID: 9221399291448050620}
+--- !u!114 &6905146189152248203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702915204394996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 433cc165622fe164ca6e0a3361101f1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  removeItemAfterUse: 0
+  itemToCheck: {fileID: 11400000, guid: de37246db98bf1e44aa051d77a9dcf9f, type: 2}
+  _RCR: {fileID: 4594063424310446577}
 --- !u!1 &8225960882980469734
 GameObject:
   m_ObjectHideFlags: 0

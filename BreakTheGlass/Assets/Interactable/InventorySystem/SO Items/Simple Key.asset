@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Simple Key
   IdPuzzle: 1
-  prefab: {fileID: 0}
-  image: {fileID: 0}
+  prefab: {fileID: 3188960801631348899, guid: aa09cd19138d0d148b100dd42e89b159, type: 3}
+  image: {fileID: 21300000, guid: 810602c133aeeb944a9f838b7cd4eed6, type: 3}

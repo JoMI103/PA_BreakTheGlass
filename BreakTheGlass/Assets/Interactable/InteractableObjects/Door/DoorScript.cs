@@ -9,11 +9,16 @@ public class DoorScript : MonoBehaviour
     private Animator _an;
     private bool openBack,openFront;
 
+
+    private checkItem _CI;
+    private bool lockk;
+
     private void Start()
     {
         _an = GetComponent<Animator>();
         openBack = false;
         openFront = false;
+        _CI = GetComponent<checkItem>();
     }
 
 
@@ -22,14 +27,18 @@ public class DoorScript : MonoBehaviour
     {
         if (!(_an.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !_an.IsInTransition(0))) return;
 
-            if (!openFront && !openBack)
+        if (!openFront && !openBack)
         {
             if (frontTrigger.colliding)
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    _an.Play("OpenBack");
-                    openBack = true;
+                    if (_CI != null) lockk = _CI.checkItems();
+                    if (lockk)
+                    {
+                      _an.Play("OpenBack");
+                        openBack = true;
+                    }
                 }
             }
 
@@ -37,8 +46,12 @@ public class DoorScript : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    _an.Play("OpenFront");
-                    openFront = true;
+                    if (_CI != null) lockk = _CI.checkItems();
+                    if (lockk)
+                    {
+                        _an.Play("OpenFront");
+                        openFront = true;
+                    }
                 }
             }
         }
@@ -50,14 +63,22 @@ public class DoorScript : MonoBehaviour
                 {
                     if (openBack)
                     {
-                        openBack = false;
-                        _an.Play("CloseBack");
+                        if (_CI != null) lockk = _CI.checkItems();
+                        if (lockk)
+                        {
+                            openBack = false;
+                            _an.Play("CloseBack");
+                        }
                     }
                     
                     if (openFront)
                     {
-                        openFront = false;
-                        _an.Play("CloseFront");
+                        if (_CI != null) lockk = _CI.checkItems();
+                        if (lockk)
+                        {
+                            openFront = false;
+                            _an.Play("CloseFront");
+                        }
                     }
                         
                 }

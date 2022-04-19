@@ -62,6 +62,7 @@ GameObject:
   - component: {fileID: 204053741068781429}
   - component: {fileID: 203137365584654231}
   - component: {fileID: 203137365584654230}
+  - component: {fileID: 3778286781331257217}
   m_Layer: 7
   m_Name: NightstandDetail03
   m_TagString: Untagged
@@ -163,7 +164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aad9253de24cb494ebc8cef06f4e9356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
   anName: Shelf
 --- !u!64 &203137365584654231
 MeshCollider:
@@ -192,6 +192,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ct: 0
+  player: {fileID: 0}
+--- !u!114 &3778286781331257217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203137365584654216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 433cc165622fe164ca6e0a3361101f1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  removeItemAfterUse: 0
+  itemToCheck: {fileID: 11400000, guid: 073571cd992ce4443973ee36084aea53, type: 2}
+  _RCR: {fileID: 203137365584654230}
 --- !u!1 &203754211066780948
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,6 +304,7 @@ GameObject:
   - component: {fileID: 3195096740237756688}
   - component: {fileID: 3195096740237756689}
   - component: {fileID: 3195096740237756690}
+  - component: {fileID: 6188865480568483305}
   m_Layer: 7
   m_Name: NightstandDetail03
   m_TagString: Untagged
@@ -389,7 +406,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aad9253de24cb494ebc8cef06f4e9356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
   anName: Shelf
 --- !u!64 &3195096740237756689
 MeshCollider:
@@ -418,6 +434,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ct: 0
+  player: {fileID: 0}
+--- !u!114 &6188865480568483305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3195096740237756692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 433cc165622fe164ca6e0a3361101f1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  removeItemAfterUse: 0
+  itemToCheck: {fileID: 11400000, guid: 073571cd992ce4443973ee36084aea53, type: 2}
+  _RCR: {fileID: 3195096740237756690}
 --- !u!1 &3195096741317012204
 GameObject:
   m_ObjectHideFlags: 0

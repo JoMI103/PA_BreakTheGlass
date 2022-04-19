@@ -28,9 +28,10 @@ public class RayCastEmitter : MonoBehaviour
 
                 if(rayC != null)
                 {
-                    rayC.cast();
                     rayC.player = this.gameObject;
+                    rayC.cast(); 
                 }
+
 
             }
             else

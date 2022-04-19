@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Nothing
   m_EditorClassIdentifier: 
   name: Nothing
-  IdPuzzle: 0
+  IdPuzzle: 123
   prefab: {fileID: 0}
-  image: {fileID: 21300000, guid: 2c79dfa0937642b4e93bc9598032b400, type: 3}
+  image: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}

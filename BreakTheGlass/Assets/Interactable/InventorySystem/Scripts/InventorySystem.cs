@@ -47,6 +47,19 @@ public class InventorySystem : MonoBehaviour
 
     }
 
+    public bool findItem(Item i)
+    {
+        foreach (InventorySlot s in slots)
+        {
+            if (s.slotItem.name == i.name)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 
     
 

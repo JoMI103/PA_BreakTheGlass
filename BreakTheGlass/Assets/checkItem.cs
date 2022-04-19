@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class checkItem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool removeItemAfterUse;
+    public Item itemToCheck;
+    public RayCastReceiver _RCR;
+
+  
+
+    public bool checkItems()
     {
-        
+        bool returnn = false;
+        InventorySystem _IS = _RCR.player.gameObject.GetComponentInParent<InventorySystem>();
+
+
+        returnn = _IS.findItem(itemToCheck);
+        if (removeItemAfterUse && returnn)
+        {
+            //remove;
+        }
+        return returnn;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

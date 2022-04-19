@@ -15,4 +15,4 @@ MonoBehaviour:
   name: MagnifyingGlass
   IdPuzzle: 111
   prefab: {fileID: 284719244595524282, guid: e46100d48b3411043900ff819546ecff, type: 3}
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: d6ef1a460b8f00840b0492dd97664a1c, type: 3}

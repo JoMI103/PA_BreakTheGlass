@@ -12,34 +12,45 @@ public class OpenShelf : MonoBehaviour
     [SerializeField] private string anName;
 
 
-    //private checkItem
+    private checkItem _CI;
+    private bool lockk;
 
     private void Start()
     {
         receiver = GetComponent<RayCastReceiver>();
         _an = GetComponent<Animator>();
-        
+        _CI = GetComponent<checkItem>();
+        lockk = false;
+
+
     }
 
     private void Update()
     {
+      
         if (!(_an.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !_an.IsInTransition(0))) return;
 
-            if (Input.GetKeyUp(KeyCode.E) && receiver.ct)
+        if (Input.GetKeyUp(KeyCode.E) && receiver.ct)
+        {
+            if (_CI != null) lockk = _CI.checkItems();
+
+            if (lockk)
             {
                 receiver.casted();
 
                 if (shelfisclosed)
                 {
-                    _an.Play("Open"+ anName);
+                    _an.Play("Open" + anName);
                     shelfisclosed = false;
                 }
                 else
                 {
                     _an.Play("Close" + anName);
                     shelfisclosed = true;
-                }               
+                }
             }
+        }
+
     }
 
 }

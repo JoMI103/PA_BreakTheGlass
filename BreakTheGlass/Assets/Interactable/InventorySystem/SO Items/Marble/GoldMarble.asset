@@ -15,4 +15,4 @@ MonoBehaviour:
   name: GoldMarble
   IdPuzzle: 2
   prefab: {fileID: 5521730060853876845, guid: 9cfecbc3cfbf4ff4ea4d32fc6abe114d, type: 3}
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 9e4455ebf3cd6f14a8e576a13fe2b7d7, type: 3}

@@ -16,6 +16,11 @@ public class InspectorScript : MonoBehaviour
     public Vector2 MinMaxScroll;
     public cameraManager cm;
 
+    public void Start()
+    {
+        inspecting = false;
+    }
+
     public void InspectObject(GameObject objectInsp)
     {
         if (objectInsp == null) return; if (instiatedObject != null)  Destroy(instiatedObject);

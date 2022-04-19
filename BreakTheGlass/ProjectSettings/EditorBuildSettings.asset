@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/menu.unity
     guid: 88afc10b63ce61e4c88e9a6572c97692
   - enabled: 1
-    path: Assets/Scenes/w.unity
-    guid: 4ae4ebe92b6f76f4785793df4848cbf4
+    path: Assets/Jomi/jomi.unity
+    guid: 7afbc7a5bc8df6e4b890e8a51d4a764b
   m_configObjects: {}

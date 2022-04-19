@@ -24,6 +24,6 @@ public class rotate : MonoBehaviour
             rb.AddTorque(v2);
 
         }else
-        rb.AddTorque(new Vector3(0,0,0));
+        rb.angularVelocity=new Vector3(0,0,0);
     }
 }

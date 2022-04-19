@@ -11,6 +11,9 @@ public class OpenShelf : MonoBehaviour
     private RayCastReceiver receiver;
     [SerializeField] private string anName;
 
+
+    //private checkItem
+
     private void Start()
     {
         receiver = GetComponent<RayCastReceiver>();

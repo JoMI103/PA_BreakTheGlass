@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 418f9dc35ed4db648a731e5be5b8e229, type: 3}
-  m_Name: Da Vinci Code
+  m_Name: MagnifyingGlass
   m_EditorClassIdentifier: 
-  name: Da Vinci Code
-  IdPuzzle: 4
-  prefab: {fileID: 0}
+  name: MagnifyingGlass
+  IdPuzzle: 111
+  prefab: {fileID: 284719244595524282, guid: e46100d48b3411043900ff819546ecff, type: 3}
   image: {fileID: 0}

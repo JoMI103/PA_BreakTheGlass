@@ -3,7 +3,17 @@ guid: d8ef1a61a1cd3b3488a41e9cdbd5fc31
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Capsule
+    second: {fileID: 2100000, guid: 8083cb8392a1c498784ba052308ac678, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Letter Ring
+    second: {fileID: 2100000, guid: 91aa2b1514a52495cae835c72d6d4eb5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

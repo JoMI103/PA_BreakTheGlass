@@ -7,6 +7,8 @@ public class marbleMove : MonoBehaviour
     Rigidbody m_Rigidbody;
     public float m_Speed = 5f;
 
+
+
     void Start()
     {
         //Fetch the Rigidbody from the GameObject with this script attached
@@ -15,16 +17,17 @@ public class marbleMove : MonoBehaviour
 
     void FixedUpdate()
     {
+        
         //Store user input as a movement vector
         Vector3 m_Input = new Vector3(0,0,0);
 
-        if (Input.GetKey(KeyCode.G))
+        if (Input.GetKey(KeyCode.A))
             m_Input = new Vector3(3, 0, m_Input.y);
-        if (Input.GetKey(KeyCode.J))
+        if (Input.GetKey(KeyCode.D))
             m_Input = new Vector3(-3, 0, m_Input.y);
-        if (Input.GetKey(KeyCode.H))
+        if (Input.GetKey(KeyCode.S))
             m_Input = new Vector3(m_Input.x, 0, 3);
-        if (Input.GetKey(KeyCode.Y))
+        if (Input.GetKey(KeyCode.W))
             m_Input = new Vector3(m_Input.x, 0,-3);
 
 

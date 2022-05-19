@@ -30,13 +30,15 @@ public class OpenShelf : MonoBehaviour
       
         if (!(_an.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !_an.IsInTransition(0))) return;
 
-        if (Input.GetKeyUp(KeyCode.E) && receiver.ct)
+        if (receiver.ctLeft)
         {
+            receiver.castedLeft();
+
             if (_CI != null) lockk = _CI.checkItems();
 
             if (lockk)
             {
-                receiver.casted();
+                receiver.castedLeft();
 
                 if (shelfisclosed)
                 {

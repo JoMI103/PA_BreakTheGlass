@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class InspectorScript : MonoBehaviour
 {
-    public static bool inspecting;
+    public bool inspecting;
     
-
     private GameObject instiatedObject;
     private Vector3 objectSize;
     private const float maxSize = 0.5f;
+
     [Range(1,10)]
     public float RotationSpeed;
     [Range(1, 10)]
@@ -15,6 +15,9 @@ public class InspectorScript : MonoBehaviour
 
     public Vector2 MinMaxScroll;
     public cameraManager cm;
+
+    [SerializeField]
+    private GameObject aim;
 
     public void Start()
     {
@@ -24,17 +27,19 @@ public class InspectorScript : MonoBehaviour
     public void InspectObject(GameObject objectInsp)
     {
         if (objectInsp == null) return; if (instiatedObject != null)  Destroy(instiatedObject);
+        aim.SetActive(false);
         instiatedObject = Instantiate(objectInsp, this.transform);
         
         instiatedObject.transform.localPosition = Vector3.zero;
+        MeshFilter mf = instiatedObject.GetComponent<MeshFilter>();
+        if (mf != null)
+        {
+            objectSize = Vector3.Scale(mf.mesh.bounds.extents, instiatedObject.transform.localScale);
+            instiatedObject.transform.localScale *= maxSize / OtherFunctions.getMaxElement(objectSize);
+        }
 
-        objectSize = Vector3.Scale(instiatedObject.GetComponent<MeshFilter>().mesh.bounds.extents
-            , instiatedObject.transform.localScale);
 
 
-   
-        instiatedObject.transform.localScale *= maxSize / OtherFunctions.getMaxElement(objectSize);
-    
     }
 
     [SerializeField]
@@ -49,6 +54,7 @@ public class InspectorScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             inspecting = false;
+            aim.SetActive(true);
             cm.changeCamera(0);
         }
 

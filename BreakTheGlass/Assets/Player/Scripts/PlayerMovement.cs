@@ -5,7 +5,9 @@ using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
-    
+ 
+    private InventorySystem _IS;
+    private WorldInspector _WI;
 
     public CharacterController controller;
 
@@ -22,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        _IS = GetComponent<InventorySystem>();
+        _WI = GetComponentInChildren<WorldInspector>();
         speed = 2.5f;
         gravity = -9.81f;
         jumpHeight = 1f;
@@ -30,10 +34,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (InspectorScript.inspecting) return;
-
-
-        if (InventorySystem.InventoryIsOpen)
+        //Debug.Log("body" + this.transform.position);
+        if (_WI.Worldinspecting) return;
+        if (_IS.InventoryIsOpen) 
         {
             velocity.y += gravity * Time.deltaTime;
         }

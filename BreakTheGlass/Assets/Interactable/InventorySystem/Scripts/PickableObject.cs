@@ -17,12 +17,13 @@ public class PickableObject : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.E) && receiver.ct)
+        if (receiver.ctLeft)
         {
-            receiver.casted();
+            receiver.castedLeft();
             if(receiver.player!=null)
             receiver.player.GetComponentInParent<InventorySystem>().addItem(item);
             Destroy(this.gameObject);
         }
+
     }
 }

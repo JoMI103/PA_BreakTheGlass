@@ -20,7 +20,7 @@ public class InventorySlot : MonoBehaviour
     {
         if(slotItem.prefab != null)
         {
-            InspectorScript.inspecting = true;
+            _IP.inspecting = true;
             cm.changeCamera(1);
             _IP.InspectObject(slotItem.prefab);
         }

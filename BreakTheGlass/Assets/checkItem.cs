@@ -19,7 +19,7 @@ public class checkItem : MonoBehaviour
         returnn = _IS.findItem(itemToCheck);
         if (removeItemAfterUse && returnn)
         {
-            //remove;
+            _IS.remove(itemToCheck);
         }
         return returnn;
     }

@@ -4,16 +4,30 @@ using UnityEngine;
 
 public class RayCastReceiver : MonoBehaviour
 {
-    public bool ct;
+    [HideInInspector]
+    public bool ctLeft, ctRight;
+    [HideInInspector]
     public GameObject player;
 
-    public void casted()
+
+    public void castedLeft()
     {
-        ct = false;
+        ctLeft = false;
     }
 
-    public void cast()
+    public void castLeft()
     {
-        ct = true;
+        ctLeft = true;
     }
+
+    public void castedRight()
+    {
+        ctRight = false;
+    }
+
+    public void castRight()
+    {
+        ctRight = true;
+    }
+
 }

@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class InventorySystem : MonoBehaviour
 {
-    public static bool InventoryIsOpen;
+    [SerializeField]
+    private InspectorScript _IPS;
 
+    public bool InventoryIsOpen;
     public InventorySlot[] slots;
     public GameObject inventoryUI;
+    public Item nothing;
+
     public void Start()
     {
         InventoryIsOpen = false;
@@ -15,7 +19,7 @@ public class InventorySystem : MonoBehaviour
 
     private void Update()
     {
-        if (InspectorScript.inspecting) return;
+        if (_IPS.inspecting) return;
 
         if (!inventoryUI.activeSelf)
         {
@@ -35,7 +39,7 @@ public class InventorySystem : MonoBehaviour
     {
         foreach (InventorySlot s in slots)
         {
-            if (s.slotItem.name == "Nothing")
+            if (s.slotItem.name == nothing.name)
             {
                 s.slotItem = i;
                 updateSlots();
@@ -44,6 +48,22 @@ public class InventorySystem : MonoBehaviour
         }
 
         Debug.Log("no Space");
+
+    }
+
+    public void remove(Item i)
+    {
+        foreach (InventorySlot s in slots)
+        {
+            if (s.slotItem.name == i.name)
+            {
+                s.slotItem = nothing;
+                updateSlots();
+                return;
+            }
+        }
+
+        Debug.Log("item not found");
 
     }
 

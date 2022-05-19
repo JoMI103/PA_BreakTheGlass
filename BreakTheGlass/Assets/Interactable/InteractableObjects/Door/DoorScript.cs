@@ -8,13 +8,14 @@ public class DoorScript : MonoBehaviour
     private CheckTrigger frontTrigger, backTrigger;
     private Animator _an;
     private bool openBack,openFront;
-
+    private RayCastReceiver receiver;
 
     private checkItem _CI;
     private bool lockk;
 
     private void Start()
     {
+        receiver = GetComponentInChildren<RayCastReceiver>();
         _an = GetComponent<Animator>();
         openBack = false;
         openFront = false;
@@ -31,8 +32,9 @@ public class DoorScript : MonoBehaviour
         {
             if (frontTrigger.colliding)
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (receiver.ctLeft)
                 {
+                    receiver.castedLeft();
                     if (_CI != null) lockk = _CI.checkItems();
                     if (lockk)
                     {
@@ -44,8 +46,9 @@ public class DoorScript : MonoBehaviour
 
             if (backTrigger.colliding)
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (receiver.ctLeft)
                 {
+                    receiver.castedLeft();
                     if (_CI != null) lockk = _CI.checkItems();
                     if (lockk)
                     {
@@ -59,8 +62,9 @@ public class DoorScript : MonoBehaviour
         {
             if (frontTrigger.colliding || backTrigger.colliding)
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (receiver.ctLeft)
                 {
+                    receiver.castedLeft();
                     if (openBack)
                     {
                         if (_CI != null) lockk = _CI.checkItems();

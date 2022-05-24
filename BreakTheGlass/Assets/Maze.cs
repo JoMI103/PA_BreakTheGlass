@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class Maze : MonoBehaviour
 {
-    [SerializeField]
-    private Transform InspectorCameraTransform;
+    
 
 
 
@@ -18,14 +17,14 @@ public class Maze : MonoBehaviour
     private checkItem _CI;
 
     private bool lockk;
-    public bool inspecting;
+
 
     private void Start()
     {
         receiver = GetComponent<RayCastReceiver>();
         _CI = GetComponent<checkItem>();
         lockk = false;
-        inspecting = true;
+        
     }
 
     private void Update()
@@ -44,20 +43,7 @@ public class Maze : MonoBehaviour
             }
         }
 
-        if (receiver.ctRight)
-        {
-            Debug.Log("vremivretirve");
-            receiver.castedRight();
-
-            if (inspecting)
-            {
-                if (receiver.player.GetComponent<WorldInspector>().
-                    cameraToInspecting(InspectorCameraTransform.position, InspectorCameraTransform.rotation))
-                    inspecting = !inspecting;
-            }
-            else
-                    if (receiver.player.GetComponent<WorldInspector>().cameraToBody()) inspecting = !inspecting;
-        }
+       
     }
 
 }

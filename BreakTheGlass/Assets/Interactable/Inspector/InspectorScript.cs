@@ -1,7 +1,12 @@
 using UnityEngine;
 
+using UnityEngine.EventSystems;
+
 public class InspectorScript : MonoBehaviour
 {
+    private overInteractable oI_;
+    private bool inter;
+
     public bool inspecting;
     
     private GameObject instiatedObject;
@@ -38,6 +43,15 @@ public class InspectorScript : MonoBehaviour
             instiatedObject.transform.localScale *= maxSize / OtherFunctions.getMaxElement(objectSize);
         }
 
+        oI_ = instiatedObject.GetComponent<overInteractable>();
+        if(oI_ != null)
+        {
+            inter = true;
+        }
+        else
+        {
+            inter = false;
+        }
 
 
     }
@@ -49,7 +63,11 @@ public class InspectorScript : MonoBehaviour
 
     private void Update()
     {
+        
+        if (EventSystem.current.IsPointerOverGameObject()) { return; }
+        
         if (!inspecting) return;
+        if (inter) if (oI_.over) return;
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {

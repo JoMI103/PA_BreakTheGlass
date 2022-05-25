@@ -7,5 +7,6 @@ public class Item : ScriptableObject
     public string IdPuzzle;
     public GameObject prefab;
     public Sprite image;
+    public bool interactableOnInspector;
 
 }

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 418f9dc35ed4db648a731e5be5b8e229, type: 3}
   m_Name: DaVInci
   m_EditorClassIdentifier: 
-  name: 
-  IdPuzzle: 
-  prefab: {fileID: 0}
+  name: DaVinci
+  IdPuzzle: 10
+  prefab: {fileID: 4121725716672833423, guid: cc3b7a93c9ae54d5697bdfff8cfe1670, type: 3}
   image: {fileID: 0}
+  interactableOnInspector: 1

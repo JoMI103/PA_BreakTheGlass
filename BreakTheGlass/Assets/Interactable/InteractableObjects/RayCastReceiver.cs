@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RayCastReceiver : MonoBehaviour
 {
-    [HideInInspector]
+    //[HideInInspector]
     public bool ctLeft, ctRight;
     [HideInInspector]
     public GameObject player;

@@ -6,6 +6,11 @@ public class overInteractable : MonoBehaviour
 {
     public bool over;
 
+    public void Start()
+    {
+        over = false;
+    }
+
     public void isover()
     {
         over = true;

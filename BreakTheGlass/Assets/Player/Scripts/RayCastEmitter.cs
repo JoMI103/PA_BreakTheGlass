@@ -6,7 +6,11 @@ using UnityEngine.EventSystems;
 public class RayCastEmitter : MonoBehaviour
 {
     [SerializeField]
-    private InventorySystem _IS;
+    private GameObject _IS;
+    [SerializeField]
+    private float distance;
+
+    public bool ForwardFree;
 
     public LayerMask layerMask;
 
@@ -26,45 +30,88 @@ public class RayCastEmitter : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             RaycastHit hit;
-            // Does the ray intersect any objects excluding the player layer
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 3f, layerMask))
+            if (ForwardFree)
             {
-                RayCastReceiver rayC;
-                rayC = hit.transform.gameObject.GetComponent<RayCastReceiver>();
-
-                if(rayC != null)
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distance, layerMask))
                 {
-                    rayC.player = this.gameObject;
-                    rayC.castLeft(); 
+                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * distance, Color.green);
+                    RayCastReceiver rayC;
+                    rayC = hit.transform.gameObject.GetComponent<RayCastReceiver>();
+
+                    if (rayC != null)
+                    {
+                        rayC.player = _IS;
+                        rayC.castLeft();
+                    }
+                }
+                else
+                {
+                    Debug.Log("Did not Hit Left");
                 }
             }
             else
             {
-                
-                Debug.Log("Did not Hit Left");
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, distance))
+                {
+                    Debug.DrawLine(ray.origin, hit.point);
+                    RayCastReceiver rayC;
+                    rayC = hit.transform.gameObject.GetComponent<RayCastReceiver>();
+
+                    if (rayC != null)
+                    {
+                        rayC.player = _IS;
+                        rayC.castLeft();
+                    }
+                }
+                else
+                {
+                    Debug.Log("Did not Hit Left");
+                }
             }
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             RaycastHit hit;
-            // Does the ray intersect any objects excluding the player layer
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 3f, layerMask))
+            if (ForwardFree)
             {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward), Color.red);
-                RayCastReceiver rayC;
-                rayC = hit.transform.gameObject.GetComponent<RayCastReceiver>();
-
-                if (rayC != null)
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, distance, layerMask))
                 {
-                    rayC.player = this.gameObject;
-                    rayC.castRight();
+                    Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * distance, Color.green);
+                    RayCastReceiver rayC;
+                    rayC = hit.transform.gameObject.GetComponent<RayCastReceiver>();
+
+                    if (rayC != null)
+                    {
+                        rayC.player = _IS;
+                        rayC.castRight();
+                    }
+                }
+                else
+                {
+                    Debug.Log("Did not Hit Righ");
                 }
             }
             else
             {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, distance))
+                {
+                    Debug.DrawLine(ray.origin, hit.point);
+                    RayCastReceiver rayC;
+                    rayC = hit.transform.gameObject.GetComponent<RayCastReceiver>();
 
-                Debug.Log("Did not Hit Righ");
+                    if (rayC != null)
+                    {
+                        rayC.player = _IS;
+                        rayC.castRight();
+                    }
+                }
+                else
+                {
+                    Debug.Log("Did not Hit Righ");
+                }
             }
         }
     }

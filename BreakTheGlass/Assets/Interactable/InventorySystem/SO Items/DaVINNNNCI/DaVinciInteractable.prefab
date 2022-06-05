@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 285778480866747710}
   - component: {fileID: 6878713790892792516}
   - component: {fileID: 2821320900583418542}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Letter Ring.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250734410739569210}
-  m_LocalRotation: {x: -0.25236028, y: 0.6605409, z: -0.25236028, w: 0.66054094}
-  m_LocalPosition: {x: -0.035205, y: 0, z: 0}
+  m_LocalRotation: {x: 0.05547897, y: 0.70492697, z: 0.05547897, w: 0.70492697}
+  m_LocalPosition: {x: -0.05841099, y: 0, z: 0}
   m_LocalScale: {x: 77.94751, y: 77.94751, z: 153.50478}
   m_Children: []
   m_Father: {fileID: 3636831654750731573}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 9}
 --- !u!33 &7112681078423673487
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 3187167671347240384}
   - component: {fileID: 4763945365710248667}
   - component: {fileID: 2500180630265253527}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Letter Ring.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,13 +139,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511157181472263615}
-  m_LocalRotation: {x: 0.5300742, y: 0.4679973, z: 0.53007406, w: 0.4679972}
-  m_LocalPosition: {x: -0.058410995, y: 0, z: 0}
+  m_LocalRotation: {x: 0.05547897, y: 0.70492697, z: 0.05547897, w: 0.70492697}
+  m_LocalPosition: {x: -0.035205, y: 0, z: 0}
   m_LocalScale: {x: 77.94751, y: 77.94751, z: 153.50478}
   m_Children: []
   m_Father: {fileID: 3636831654750731573}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 9}
 --- !u!33 &9115484115175671984
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 7070086104320354194}
   - component: {fileID: 8766773340162637231}
   - component: {fileID: 1027889161845779754}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Letter Ring.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,13 +251,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102428770777723060}
-  m_LocalRotation: {x: 0.5264045, y: -0.47212106, z: 0.52640444, w: -0.47212106}
+  m_LocalRotation: {x: 0.05547897, y: 0.70492697, z: 0.05547897, w: 0.70492697}
   m_LocalPosition: {x: 0.058410995, y: 0, z: 0}
   m_LocalScale: {x: 77.94751, y: 77.94751, z: 153.50478}
   m_Children: []
   m_Father: {fileID: 3636831654750731573}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 9}
 --- !u!33 &611124547529243428
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -347,7 +347,10 @@ GameObject:
   - component: {fileID: 7078212269961866407}
   - component: {fileID: 88130549891639065}
   - component: {fileID: 8257132334644646156}
-  m_Layer: 0
+  - component: {fileID: 274739609479498147}
+  - component: {fileID: 4630400617317980749}
+  - component: {fileID: 6232039001726993493}
+  m_Layer: 7
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,13 +364,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4057112848268559727}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0.03955803, y: 0.70599943, z: -0.03955803, w: 0.70599943}
   m_LocalPosition: {x: -0, y: 0.00000000804224, z: 0}
   m_LocalScale: {x: 76.232254, y: 76.232254, z: 150.12685}
   m_Children: []
   m_Father: {fileID: 3636831654750731573}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -6.414}
 --- !u!33 &88130549891639065
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -417,6 +420,54 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &274739609479498147
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057112848268559727}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -9114703323446395147, guid: d8ef1a61a1cd3b3488a41e9cdbd5fc31, type: 3}
+--- !u!114 &4630400617317980749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057112848268559727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c08f85bf1e464d25838f4330e0dccc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rowRCR:
+  - {fileID: 1027889161845779754}
+  - {fileID: 6970560538004968548}
+  - {fileID: 3625856398130933893}
+  - {fileID: 8663859459639627381}
+  - {fileID: 2500180630265253527}
+  - {fileID: 2821320900583418542}
+--- !u!114 &6232039001726993493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057112848268559727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9bd3e8ad649f4044a87f06d1b3c509b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ctLeft: 0
+  ctRight: 0
+  player: {fileID: 0}
 --- !u!1 &4121725716672833423
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,8 +477,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3636831654750731573}
-  - component: {fileID: 1906309216069609433}
-  - component: {fileID: 7528364987935944089}
+  - component: {fileID: 3614332826259704477}
   m_Layer: 7
   m_Name: DaVinciInteractable
   m_TagString: Untagged
@@ -456,26 +506,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!114 &1906309216069609433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4121725716672833423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c08f85bf1e464d25838f4330e0dccc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rows:
-  - {fileID: 1250734410739569210}
-  - {fileID: 1511157181472263615}
-  - {fileID: 6206618360460863924}
-  - {fileID: 4124619630868685211}
-  - {fileID: 7887051133611214898}
-  - {fileID: 2102428770777723060}
---- !u!114 &7528364987935944089
+--- !u!114 &3614332826259704477
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -487,6 +518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee232b7611188483fae0fd550dd3ffa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  over: 0
 --- !u!1 &4124619630868685211
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +532,7 @@ GameObject:
   - component: {fileID: 3382490949073206085}
   - component: {fileID: 1836865705253821334}
   - component: {fileID: 3625856398130933893}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Letter Ring.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,13 +546,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4124619630868685211}
-  m_LocalRotation: {x: 0.70709217, y: -0.0045529394, z: 0.7070921, w: -0.004550939}
+  m_LocalRotation: {x: 0.05547897, y: 0.70492697, z: 0.05547897, w: 0.70492697}
   m_LocalPosition: {x: 0.012, y: 0, z: 0}
   m_LocalScale: {x: 77.94751, y: 77.94751, z: 153.50478}
   m_Children: []
   m_Father: {fileID: 3636831654750731573}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 9}
 --- !u!33 &1206546774906436263
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -612,7 +644,7 @@ GameObject:
   - component: {fileID: 1289580958732483195}
   - component: {fileID: 4310888317722611537}
   - component: {fileID: 8663859459639627381}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Letter Ring.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -626,13 +658,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6206618360460863924}
-  m_LocalRotation: {x: 0.47270605, y: 0.5258793, z: 0.472706, w: 0.52587926}
+  m_LocalRotation: {x: 0.05547897, y: 0.70492697, z: 0.05547897, w: 0.70492697}
   m_LocalPosition: {x: -0.012, y: 0, z: 0}
   m_LocalScale: {x: 77.94751, y: 77.94751, z: 153.50478}
   m_Children: []
   m_Father: {fileID: 3636831654750731573}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 9}
 --- !u!33 &4495981937707498622
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -724,7 +756,7 @@ GameObject:
   - component: {fileID: 2458415940191024647}
   - component: {fileID: 6080603632489643859}
   - component: {fileID: 6970560538004968548}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Letter Ring.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -738,13 +770,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7887051133611214898}
-  m_LocalRotation: {x: 0.6613539, y: -0.25022206, z: 0.6613539, w: -0.250222}
+  m_LocalRotation: {x: 0.05547897, y: 0.70492697, z: 0.05547897, w: 0.70492697}
   m_LocalPosition: {x: 0.035205, y: 0, z: 0}
   m_LocalScale: {x: 77.94751, y: 77.94751, z: 153.50478}
   m_Children: []
   m_Father: {fileID: 3636831654750731573}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 9}
 --- !u!33 &7587668468455236751
 MeshFilter:
   m_ObjectHideFlags: 0

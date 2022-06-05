@@ -10,7 +10,10 @@ public class InventorySystem : MonoBehaviour
     public bool InventoryIsOpen;
     public InventorySlot[] slots;
     public GameObject inventoryUI;
+    public WorldInspector wI;
     public Item nothing;
+
+    public InventorySlot selectedSlot;
 
     public void Start()
     {
@@ -21,7 +24,7 @@ public class InventorySystem : MonoBehaviour
     {
         if (_IPS.inspecting) return;
 
-        if (!inventoryUI.activeSelf)
+        if (!inventoryUI.activeSelf && !wI.Worldinspecting)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
@@ -90,5 +93,19 @@ public class InventorySystem : MonoBehaviour
             s.updateButton();
         }
     }
+
+    public void deSelectSlots()
+    {
+        selectedSlot = null;
+
+        foreach (InventorySlot s in slots)
+        {
+            s.deSelectSlot();
+        }
+    }
+
+    public void inspectItem() { if (selectedSlot != null) selectedSlot.InspectItem(); }
+
+    public void useItem() { if (selectedSlot != null) selectedSlot.slotItem = nothing; selectedSlot.updateButton(); selectedSlot.deSelectSlot(); selectedSlot = null; }
 
 }

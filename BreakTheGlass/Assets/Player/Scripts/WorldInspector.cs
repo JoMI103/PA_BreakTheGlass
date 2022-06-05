@@ -17,9 +17,12 @@ public class WorldInspector : MonoBehaviour
 
     const float errorfloat = 0.01f;
 
+    private RayCastEmitter rce;
+
     void Start()
     {
-        targetPos = transform.position;
+        rce = GetComponent<RayCastEmitter>();
+           targetPos = transform.position;
         targetRot = transform.rotation;
         isMoving = false;
         Worldinspecting = false;
@@ -29,11 +32,16 @@ public class WorldInspector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Worldinspecting) { 
+            Cursor.lockState = CursorLockMode.None;
+            rce.ForwardFree = false;
+        }
+
         if (!Worldinspecting && !isMoving)
         {
             lastPos = transform.position;
             lastRot = transform.rotation;
-   
+            rce.ForwardFree = true;
             return;
         }
 
@@ -64,7 +72,7 @@ public class WorldInspector : MonoBehaviour
         targetPos = finalPosition;
         targetRot = finalRotation;
         Worldinspecting = true;
-        
+    
         return true;
     }
     public bool cameraToBody()
@@ -73,7 +81,8 @@ public class WorldInspector : MonoBehaviour
         targetPos = lastPos;
         targetRot = lastRot;
         makeWorldinspecting = true;
-        isMoving = true;        
+        isMoving = true;
+       
         return true;
     }
 

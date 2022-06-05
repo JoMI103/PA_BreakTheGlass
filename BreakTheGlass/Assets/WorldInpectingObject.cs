@@ -27,12 +27,12 @@ public class WorldInpectingObject : MonoBehaviour
 
             if (inspecting)
             {
-                if (receiver.player.GetComponent<WorldInspector>().
+                if (receiver.player.GetComponentInChildren<WorldInspector>().
                     cameraToInspecting(InspectorCameraTransform.position, InspectorCameraTransform.rotation))
                     inspecting = !inspecting;
             }
             else
-                    if (receiver.player.GetComponent<WorldInspector>().cameraToBody()) inspecting = !inspecting;
+                    if (receiver.player.GetComponentInChildren<WorldInspector>().cameraToBody()) inspecting = !inspecting;
         }
     }
 }

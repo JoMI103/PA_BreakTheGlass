@@ -63,11 +63,10 @@ public class InspectorScript : MonoBehaviour
 
     private void Update()
     {
-        
+   
         if (EventSystem.current.IsPointerOverGameObject()) { return; }
-        
+    
         if (!inspecting) return;
-        if (inter) if (oI_.over) return;
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -75,6 +74,10 @@ public class InspectorScript : MonoBehaviour
             aim.SetActive(true);
             cm.changeCamera(0);
         }
+
+        if (inter) if (oI_.over) { return;}
+
+      
 
         if (instiatedObject == null) return;
 

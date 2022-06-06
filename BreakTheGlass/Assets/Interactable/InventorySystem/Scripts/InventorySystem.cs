@@ -46,6 +46,7 @@ public class InventorySystem : MonoBehaviour
             {
                 s.slotItem = i;
                 updateSlots();
+                selectedSlot = s;
                 return;
             }
         }

@@ -19,6 +19,8 @@ public class WorldInspector : MonoBehaviour
 
     private RayCastEmitter rce;
 
+    public bool deactivate;
+
     void Start()
     {
         rce = GetComponent<RayCastEmitter>();
@@ -35,6 +37,7 @@ public class WorldInspector : MonoBehaviour
         if (Worldinspecting) { 
             Cursor.lockState = CursorLockMode.None;
             rce.ForwardFree = false;
+            Debug.Log("2");
         }
 
         if (!Worldinspecting && !isMoving)
@@ -42,12 +45,13 @@ public class WorldInspector : MonoBehaviour
             lastPos = transform.position;
             lastRot = transform.rotation;
             rce.ForwardFree = true;
+            Debug.Log("1");
             return;
         }
 
 
         if (transform.position.magnitude >= targetPos.magnitude - errorfloat
-            && transform.position.magnitude <= targetPos.magnitude + errorfloat)
+            && transform.position.magnitude <= targetPos.magnitude + errorfloat || deactivate)
         {
             transform.position = targetPos;
             transform.rotation = targetRot;

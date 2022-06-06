@@ -52,7 +52,7 @@ public class RayCastEmitter : MonoBehaviour
             else
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out hit, distance))
+                if (Physics.Raycast(ray, out hit, distance, layerMask))
                 {
                     Debug.DrawLine(ray.origin, hit.point);
                     RayCastReceiver rayC;
@@ -96,7 +96,7 @@ public class RayCastEmitter : MonoBehaviour
             else
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out hit, distance))
+                if (Physics.Raycast(ray, out hit, distance,layerMask))
                 {
                     Debug.DrawLine(ray.origin, hit.point);
                     RayCastReceiver rayC;
@@ -104,6 +104,7 @@ public class RayCastEmitter : MonoBehaviour
 
                     if (rayC != null)
                     {
+                        Debug.Log("olaaa");
                         rayC.player = _IS;
                         rayC.castRight();
                     }
@@ -112,6 +113,8 @@ public class RayCastEmitter : MonoBehaviour
                 {
                     Debug.Log("Did not Hit Righ");
                 }
+
+                
             }
         }
     }

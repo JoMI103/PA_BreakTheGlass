@@ -22,7 +22,6 @@ public class WorldInpectingObject : MonoBehaviour
     {
         if (receiver.ctRight)
         {
-            Debug.Log("vremivretirve");
             receiver.castedRight();
 
             if (inspecting)

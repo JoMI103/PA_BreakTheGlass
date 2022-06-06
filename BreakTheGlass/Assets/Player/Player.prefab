@@ -5671,7 +5671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _IS: {fileID: 8096982242959059659}
-  distance: 3
+  distance: 4
   ForwardFree: 1
   layerMask:
     serializedVersion: 2
@@ -5692,6 +5692,7 @@ MonoBehaviour:
   transitionSpeed: 2
   magnitude: 2.7
   degree: 2.61
+  deactivate: 1
 --- !u!1 &8096982242118347138
 GameObject:
   m_ObjectHideFlags: 0

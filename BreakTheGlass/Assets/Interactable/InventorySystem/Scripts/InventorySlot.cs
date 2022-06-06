@@ -20,8 +20,7 @@ public class InventorySlot : MonoBehaviour
     }
 
     public void updateButton()
-    {
-        
+    {    
         img.sprite = slotItem.image;
     }
 

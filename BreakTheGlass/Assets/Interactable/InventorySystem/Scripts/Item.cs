@@ -9,4 +9,5 @@ public class Item : ScriptableObject
     public Sprite image;
     public bool interactableOnInspector;
 
+    public GameObject placeableGameObject;
 }

@@ -7,8 +7,9 @@ public class mockupObject : MonoBehaviour
     public int id;
     public bool raycastable;
     
+
     public mockupManager _MM;
-    RayCastReceiver _RCR;
+    public RayCastReceiver _RCR;
 
     public Item currentItem;
 
@@ -18,15 +19,14 @@ public class mockupObject : MonoBehaviour
 
     void Start()
     {
-        _RCR = GetComponentInChildren<RayCastReceiver>();
+       
     }
 
     // Update is called once per frame
     void Update()
     {
         if (!raycastable) return;
-
-
+    
         if (_RCR.ctLeft)
         {
             if(currentItem == null)

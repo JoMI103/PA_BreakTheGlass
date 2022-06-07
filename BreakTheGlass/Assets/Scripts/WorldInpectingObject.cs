@@ -8,7 +8,8 @@ public class WorldInpectingObject : MonoBehaviour
     private Transform InspectorCameraTransform;
 
     private RayCastReceiver receiver;
-    private bool inspecting;
+    [HideInInspector]
+    public bool inspecting;
 
     // Start is called before the first frame update
     void Start()

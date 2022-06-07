@@ -104,7 +104,6 @@ public class RayCastEmitter : MonoBehaviour
 
                     if (rayC != null)
                     {
-                        Debug.Log("olaaa");
                         rayC.player = _IS;
                         rayC.castRight();
                     }

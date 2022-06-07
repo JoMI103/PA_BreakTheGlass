@@ -37,7 +37,6 @@ public class WorldInspector : MonoBehaviour
         if (Worldinspecting) { 
             Cursor.lockState = CursorLockMode.None;
             rce.ForwardFree = false;
-            Debug.Log("2");
         }
 
         if (!Worldinspecting && !isMoving)
@@ -45,7 +44,6 @@ public class WorldInspector : MonoBehaviour
             lastPos = transform.position;
             lastRot = transform.rotation;
             rce.ForwardFree = true;
-            Debug.Log("1");
             return;
         }
 
@@ -60,10 +58,8 @@ public class WorldInspector : MonoBehaviour
             return;
         }
         else
-        {
-            
+        {     
             isMoving = true;
-            Debug.Log("FWER");
             transform.position = Vector3.MoveTowards(transform.position, targetPos, transitionSpeed * Time.deltaTime);
             transform.rotation = Quaternion.Euler(Vector3.RotateTowards(transform.rotation.eulerAngles, targetRot.eulerAngles,
                 degree * Mathf.Deg2Rad,magnitude));

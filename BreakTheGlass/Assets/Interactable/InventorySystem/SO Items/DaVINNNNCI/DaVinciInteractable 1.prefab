@@ -453,6 +453,9 @@ MonoBehaviour:
   - {fileID: 8663859459639627381}
   - {fileID: 2500180630265253527}
   - {fileID: 2821320900583418542}
+  _IS: {fileID: 0}
+  reward: {fileID: 11400000, guid: 533340ff53aadfc4995f8f9e421f14c5, type: 2}
+  davinci: {fileID: 11400000, guid: 1e03b36cc769348a387f7d894db8b762, type: 2}
 --- !u!114 &6232039001726993493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,7 +482,7 @@ GameObject:
   - component: {fileID: 3636831654750731573}
   - component: {fileID: 3614332826259704477}
   m_Layer: 7
-  m_Name: DaVinciInteractable
+  m_Name: DaVinciInteractable 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

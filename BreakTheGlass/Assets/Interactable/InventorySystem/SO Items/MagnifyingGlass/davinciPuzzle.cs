@@ -17,12 +17,16 @@ public class davinciPuzzle : MonoBehaviour
     private alphabet[] rowLetters, PassWord;
     private int currentRow;
 
+    public InventorySystem _IS;
+    public Item reward, davinci;
+
+
     private void Start()
     {
         overInt = GetComponentInParent<overInteractable>();
         _rcr = GetComponent<RayCastReceiver>();
         rowLetters = new alphabet[6] { alphabet.A, alphabet.A, alphabet.A, alphabet.A, alphabet.A, alphabet.A };
-        PassWord = new alphabet[6] { alphabet.A, alphabet.E, alphabet.N, alphabet.I, alphabet.E, alphabet.R };
+        PassWord = new alphabet[6] { alphabet.A, alphabet.E, alphabet.N, alphabet.I, alphabet.G, alphabet.M };
     }
 
 
@@ -77,7 +81,9 @@ public class davinciPuzzle : MonoBehaviour
                 360 / 26f * ((int)rowLetters[currentRow]+1)- 360 / 26f/2f));
             if (checkPassWord())
             {
-                Debug.Log("opened");
+                _IS.remove(davinci);
+                _IS.addItem(reward);
+                _IS.selectedSlot.InspectItem();
             }
         }
            

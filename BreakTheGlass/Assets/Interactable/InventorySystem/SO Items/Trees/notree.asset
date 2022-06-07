@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   IdPuzzle: 
-  prefab: {fileID: 100000, guid: 9e89432a72f5395458e9de4cc2743aa1, type: 3}
+  prefab: {fileID: 4113764832685820561, guid: bd23fb95eec6afb43b19c96ae459ea21, type: 3}
   image: {fileID: 21300000, guid: 882371b1282b6894fb0688e601dc4440, type: 3}
   interactableOnInspector: 0
-  placeableGameObject: {fileID: 100000, guid: 9e89432a72f5395458e9de4cc2743aa1, type: 3}
+  placeableGameObject: {fileID: 8446975242472214949, guid: e9544d5a483535d4883e3b0965b55ad5, type: 3}

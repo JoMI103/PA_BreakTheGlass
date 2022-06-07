@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 418f9dc35ed4db648a731e5be5b8e229, type: 3}
-  m_Name: DaVInci
+  m_Name: Main Key
   m_EditorClassIdentifier: 
-  name: DaVinci
-  IdPuzzle: 10
-  prefab: {fileID: 4121725716672833423, guid: bee7cddd88817ff4996962a789b5cdea, type: 3}
-  image: {fileID: 21300000, guid: 1615dc7b0b6e0a147a46fba76617d3d6, type: 3}
-  interactableOnInspector: 1
-  placeableGameObject: {fileID: 4121725716672833423, guid: cc3b7a93c9ae54d5697bdfff8cfe1670, type: 3}
+  name: mainKey
+  IdPuzzle: 
+  prefab: {fileID: 374289202576707483, guid: 61a6ce0971c63f34388171335f8cb564, type: 3}
+  image: {fileID: 0}
+  interactableOnInspector: 0
+  placeableGameObject: {fileID: 374289202576707483, guid: 61a6ce0971c63f34388171335f8cb564, type: 3}

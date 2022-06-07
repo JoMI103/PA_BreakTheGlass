@@ -45,7 +45,7 @@ public class InventorySlot : MonoBehaviour
         {
             _IP.inspecting = true;
             cm.changeCamera(1);
-            _IP.InspectObject(slotItem.prefab);
+            _IP.InspectObject(slotItem.prefab,_IS);
         }
     }
 

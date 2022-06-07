@@ -29,7 +29,7 @@ public class InspectorScript : MonoBehaviour
         inspecting = false;
     }
 
-    public void InspectObject(GameObject objectInsp)
+    public void InspectObject(GameObject objectInsp,InventorySystem _ISS)
     {
         if (objectInsp == null) return; if (instiatedObject != null)  Destroy(instiatedObject);
         aim.SetActive(false);
@@ -47,12 +47,18 @@ public class InspectorScript : MonoBehaviour
         if(oI_ != null)
         {
             inter = true;
+            davinciPuzzle dp = oI_.GetComponentInChildren<davinciPuzzle>();
+            if (dp != null)
+            {
+                dp._IS = _ISS;
+            }
         }
         else
         {
             inter = false;
         }
 
+        
 
     }
 

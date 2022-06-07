@@ -63,8 +63,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 510a5cfc955092a45b9cd0f5a3a52ed8, type: 2}
-  - {fileID: 2100000, guid: 510a5cfc955092a45b9cd0f5a3a52ed8, type: 2}
+  - {fileID: 2100000, guid: 408bb14807688b04c9c45cf7e1b5e61e, type: 2}
+  - {fileID: 2100000, guid: 408bb14807688b04c9c45cf7e1b5e61e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InspectorCameraTransform: {fileID: 1270222236}
+  inspecting: 0
 --- !u!114 &7821246883416070293
 MonoBehaviour:
   m_ObjectHideFlags: 0

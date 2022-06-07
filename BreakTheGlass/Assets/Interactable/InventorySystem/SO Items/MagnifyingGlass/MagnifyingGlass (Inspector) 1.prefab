@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2724933031477301474}
   m_Layer: 6
-  m_Name: MagnifyingGlass (Inspector)
+  m_Name: MagnifyingGlass (Inspector) 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 284719244595524282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.889, y: 0.8051, z: -10.393}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6024741918466902823}
   m_Father: {fileID: 0}

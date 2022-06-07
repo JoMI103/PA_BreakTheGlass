@@ -18,12 +18,16 @@ public class mockupManager : MonoBehaviour
 
     private bool active;
 
+
+    private GameObject rewardPortal1,rewardPortal2;
+
     [System.Serializable]
     public struct ItemPlace
     {
         public Transform placeItem;
         public Item defaultItem;
         public Item[] permitItems;
+        public Item puzzleItem;
     }
      public ItemPlace[] itemsPlace;
 
@@ -124,6 +128,8 @@ public class mockupManager : MonoBehaviour
         _IS.remove(item);
         mObjectIn[id].addGameobject(item,item.placeableGameObject);
         mObjectOut[id].addGameobject(item,item.placeableGameObject);
+
+        if (checkPuzzle()) { Debug.Log("puzzleCOmplete"); }
     }
 
     public void removeMockupObject(Item item, int id)
@@ -139,5 +145,22 @@ public class mockupManager : MonoBehaviour
         {
             mo.rayCastableCube.SetActive(var);
         }
+    }
+
+    public bool checkPuzzle()
+    {
+        bool var = true;
+        int i = 0;
+        foreach(ItemPlace ip in itemsPlace)
+        {
+            
+            if(ip.puzzleItem != null)
+            {
+                if (ip.puzzleItem != mObjectIn[i].currentItem) var = false;
+            }
+            i++;
+        }
+
+        return var;
     }
 }

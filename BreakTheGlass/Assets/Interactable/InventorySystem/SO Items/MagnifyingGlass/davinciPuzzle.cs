@@ -22,7 +22,7 @@ public class davinciPuzzle : MonoBehaviour
         overInt = GetComponentInParent<overInteractable>();
         _rcr = GetComponent<RayCastReceiver>();
         rowLetters = new alphabet[6] { alphabet.A, alphabet.A, alphabet.A, alphabet.A, alphabet.A, alphabet.A };
-        PassWord = new alphabet[6] { alphabet.K, alphabet.I, alphabet.L, alphabet.L, alphabet.E, alphabet.R };
+        PassWord = new alphabet[6] { alphabet.A, alphabet.E, alphabet.N, alphabet.I, alphabet.E, alphabet.R };
     }
 
 

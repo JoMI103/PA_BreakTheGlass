@@ -15,5 +15,6 @@ MonoBehaviour:
   name: DaVinci
   IdPuzzle: 10
   prefab: {fileID: 4121725716672833423, guid: cc3b7a93c9ae54d5697bdfff8cfe1670, type: 3}
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 1615dc7b0b6e0a147a46fba76617d3d6, type: 3}
   interactableOnInspector: 1
+  placeableGameObject: {fileID: 0}

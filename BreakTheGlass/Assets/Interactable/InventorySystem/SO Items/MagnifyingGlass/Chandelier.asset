@@ -15,6 +15,6 @@ MonoBehaviour:
   name: 
   IdPuzzle: 
   prefab: {fileID: 7894346015352399590, guid: c1c1e1fc89754214794be13c1fced2f5, type: 3}
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 34868fcd14f54ea4580de342cac66e60, type: 3}
   interactableOnInspector: 0
   placeableGameObject: {fileID: 7894346015352399590, guid: c1c1e1fc89754214794be13c1fced2f5, type: 3}

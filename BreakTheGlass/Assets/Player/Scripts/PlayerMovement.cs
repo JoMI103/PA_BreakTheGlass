@@ -5,7 +5,8 @@ using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
- 
+    public GameObject posTeleport;
+
     private InventorySystem _IS;
     private WorldInspector _WI;
 
@@ -50,13 +51,13 @@ public class PlayerMovement : MonoBehaviour
             float z = Input.GetAxis("Vertical");
 
             Vector3 move = transform.right * x + transform.forward * z;
+            float speedd = speed;
+            Debug.Log(speedd);
+            if (Input.GetKey(KeyCode.LeftShift))
+                speedd = 2 * speed ;
+            
 
-            if (Input.GetKeyDown(KeyCode.LeftShift))
-                speed = 5;
-            if (Input.GetKeyUp(KeyCode.LeftShift))
-                speed = 2.5f;
-
-            controller.Move(move * speed * Time.deltaTime);
+            controller.Move(move * speedd * Time.deltaTime);
 
             if (Input.GetButtonDown("Jump") && isGrounded)
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
@@ -71,5 +72,13 @@ public class PlayerMovement : MonoBehaviour
 
         //if (move.x > 0.1f || move.z > 0.1f || move.z < -0.1f || move.x < -0.1f)
        
+    }
+
+
+    public void setVelocity(float _speed,float _jump, float _gravity)
+    {
+        speed = _speed;
+        jumpHeight = _jump;
+        gravity = _gravity;
     }
 }

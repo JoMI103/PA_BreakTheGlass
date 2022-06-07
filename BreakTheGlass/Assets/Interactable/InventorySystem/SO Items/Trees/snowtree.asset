@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 418f9dc35ed4db648a731e5be5b8e229, type: 3}
   m_Name: snowtree
   m_EditorClassIdentifier: 
-  name: 
+  name: snowtree
   IdPuzzle: 
   prefab: {fileID: 1152145738235336983, guid: 71b59386f6c8cd3438530c8ccdbaf52c, type: 3}
   image: {fileID: 21300000, guid: 6d2486717373cde44b6d04f948b98305, type: 3}

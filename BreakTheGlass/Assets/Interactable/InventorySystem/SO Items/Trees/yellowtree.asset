@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 418f9dc35ed4db648a731e5be5b8e229, type: 3}
   m_Name: yellowtree
   m_EditorClassIdentifier: 
-  name: 
+  name: yellowtree
   IdPuzzle: 
   prefab: {fileID: 4767876110269900811, guid: 9b7678db1a9c23c40b245ee0d8512541, type: 3}
   image: {fileID: 21300000, guid: 3b7a980567265a340970dbccfca6e8aa, type: 3}

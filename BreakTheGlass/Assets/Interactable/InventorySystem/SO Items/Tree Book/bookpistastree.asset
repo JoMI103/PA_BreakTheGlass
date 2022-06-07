@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 418f9dc35ed4db648a731e5be5b8e229, type: 3}
   m_Name: bookpistastree
   m_EditorClassIdentifier: 
-  name: 
+  name: bookpistastree
   IdPuzzle: 
   prefab: {fileID: 4719817772764302559, guid: b1b274e688ccf4a498214739f457b72d, type: 3}
   image: {fileID: 21300000, guid: 4d3e05dbf0d68d348aa315f19b6f3422, type: 3}

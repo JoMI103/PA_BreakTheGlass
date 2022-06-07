@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour {
     public PlayerMovement pm;
+    public CharacterController cc;
     public Vector3 currentScale;
     public bool small;
 
@@ -11,6 +12,7 @@ public class Portal : MonoBehaviour {
     private void Start()
     {
         currentScale = pm.transform.localScale;
+        
     }
 
     [Header ("Main Settings")]
@@ -37,6 +39,7 @@ public class Portal : MonoBehaviour {
         trackedTravellers = new List<PortalTraveller> ();
         screenMeshFilter = screen.GetComponent<MeshFilter> ();
         screen.material.SetInt ("displayMask", 1);
+        this.gameObject.SetActive(false);
     }
 
     void LateUpdate () {
@@ -284,24 +287,29 @@ public class Portal : MonoBehaviour {
     void OnTravellerEnterPortal (PortalTraveller traveller) {
         if (!trackedTravellers.Contains (traveller)) {
 
+        //    Debug.Log("caralho");
 
-            //traveller.EnterPortalThreshold ();
-            //traveller.previousOffsetFromPortal = traveller.transform.position - transform.position + transform.forward;
-            //if (!small)
-            //{
-            //    traveller.transform.localScale = currentScale;
-            //    pm.setVelocity(2.5f, 1, -9.81f);
-         
-            //}
-            
-            //else
-            //{
-            //    traveller.transform.localScale = currentScale / 57.33232f;
-            //    pm.setVelocity(2.5f/10f, 1/ 57.33232f, -9.81f / 57.33232f);
+        //    traveller.EnterPortalThreshold();
+        //    i
 
-            //}
-            //trackedTravellers.Add (traveller);
-        }
+
+
+
+        //        traveller.transform.localScale = currentScale;
+        //    pm.setVelocity(2.5f, 1, -9.81f);
+
+        //}
+
+
+        //if (small)
+        //{
+        //    traveller.previousOffsetFromPortal = traveller.transform.position - transform.position + transform.forward;
+        //    traveller.transform.localScale = currentScale / 57.33232f;
+        //    pm.setVelocity(2.5f / 10f, 1 / 57.33232f, -9.81f / 57.33232f);
+
+        //}
+        //trackedTravellers.Add(traveller);
+    }
     }
 
     void OnTriggerEnter (Collider other) {

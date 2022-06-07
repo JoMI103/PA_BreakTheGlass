@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 418f9dc35ed4db648a731e5be5b8e229, type: 3}
   m_Name: greentree
   m_EditorClassIdentifier: 
-  name: 
+  name: greentree
   IdPuzzle: 
   prefab: {fileID: 8057966553357730901, guid: 62e5481ef32240e4192fff1950ae89b1, type: 3}
   image: {fileID: 21300000, guid: d53ec462cd9296f48b57f6a058605ae4, type: 3}

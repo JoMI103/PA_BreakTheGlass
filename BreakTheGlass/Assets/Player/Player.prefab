@@ -10419,6 +10419,7 @@ GameObject:
   - component: {fileID: 8096982242959059660}
   - component: {fileID: 8096982242959059662}
   - component: {fileID: 8659397722649715323}
+  - component: {fileID: 9121997685506785818}
   m_Layer: 0
   m_Name: Body
   m_TagString: Player
@@ -10459,8 +10460,8 @@ CharacterController:
   m_Height: 2
   m_Radius: 0.4
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_StepOffset: 0
+  m_SkinWidth: 0.01
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8096982242959059662
@@ -10538,6 +10539,19 @@ MonoBehaviour:
   wI: {fileID: 591843084}
   nothing: {fileID: 11400000, guid: d5abe4b149b479344a3b97a77334b5a3, type: 2}
   selectedSlot: {fileID: 0}
+--- !u!114 &9121997685506785818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8096982242959059659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 906cf3fd207e5450784f73a2d4b57b4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  graphicsObject: {fileID: 0}
 --- !u!1 &8262106913828968886
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 418f9dc35ed4db648a731e5be5b8e229, type: 3}
   m_Name: Book10
   m_EditorClassIdentifier: 
-  name: 
+  name: book10
   IdPuzzle: 
   prefab: {fileID: 7220286361397008884, guid: b144e072ef2a8764b999c5331aa65397, type: 3}
   image: {fileID: 21300000, guid: 10e4ea088e4a5884cbc50d6a5382010c, type: 3}
+  interactableOnInspector: 0
+  placeableGameObject: {fileID: 0}

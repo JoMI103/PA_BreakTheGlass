@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class mockupManager : MonoBehaviour
 {
+    public finalReward fr;
+
     public GameObject player;
     private InventorySystem _IS;
 
@@ -129,7 +131,10 @@ public class mockupManager : MonoBehaviour
         mObjectIn[id].addGameobject(item,item.placeableGameObject);
         mObjectOut[id].addGameobject(item,item.placeableGameObject);
 
-        if (checkPuzzle()) { Debug.Log("puzzleCOmplete"); }
+        if (checkPuzzle()) {
+
+            fr.activateReward();
+            Debug.Log("puzzleCOmplete"); }
     }
 
     public void removeMockupObject(Item item, int id)
@@ -149,6 +154,7 @@ public class mockupManager : MonoBehaviour
 
     public bool checkPuzzle()
     {
+        return true;
         bool var = true;
         int i = 0;
         foreach(ItemPlace ip in itemsPlace)

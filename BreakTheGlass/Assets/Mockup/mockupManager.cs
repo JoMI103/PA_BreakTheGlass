@@ -154,7 +154,7 @@ public class mockupManager : MonoBehaviour
 
     public bool checkPuzzle()
     {
-        return true;
+        //return true;
         bool var = true;
         int i = 0;
         foreach(ItemPlace ip in itemsPlace)
